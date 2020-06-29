@@ -1,0 +1,74 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="testbox">
+    <form action="{{ url_for('employer_form') }}" method="POST">
+         <p>Post A Vacancy</p>
+        <div class="question">
+            <label for="salutation">Salutation<span>*</span></label>
+            <div class="question-answer">
+               <div>
+                  <input type="radio" value="none" id="radio_1" name="salutation"/>
+                  <label for="radio_1" class="radio"><span>Mr.</span></label>
+               </div>
+               <div>
+                  <input  type="radio" value="none" id="radio_2" name="salutation"/>
+                  <label for="radio_2" class="radio"><span>Mrs.</span></label>
+               </div>
+            </div>
+        </div>
+         <div class="item">
+            <label for="first_name">First Name<span>*</span></label>
+            <input id="first_name" type="text" name="first_name" required/>
+        </div>
+        <div class="item">
+            <label for="last_name">Last Name<span>*</span></label>
+            <input id="last_name" type="text" name="last_name" required/>
+        </div>
+        <div class="item">
+            <label for="company_name">Company Name<span>*</span></label>
+            <input id="company_name" type="text" name="company_name" required/>
+        </div>
+        <div class="question">
+            <label for="size">Company Size<span>*</span></label>
+            <div class="question-answer">
+               <div>
+                  <input type="radio" value="none" id="radio_3" name="size"/>
+                  <label for="radio_1" class="radio"><span>Less than 10 employees</span></label>
+               </div>
+               <div>
+                  <input  type="radio" value="none" id="radio_4" name="size"/>
+                  <label for="radio_2" class="radio"><span>10 - 50 employees</span></label>
+               </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_5" name="size"/>
+                  <label for="radio_2" class="radio"><span>50 - 250 employees</span></label>
+               </div>
+                <div>
+                  <input  type="radio" value="none" id="radio_6" name="size"/>
+                  <label for="radio_2" class="radio"><span>more than 250 employees</span></label>
+               </div>
+            </div>
+        </div>
+         <div class="item">
+            <label for="email">Email Address<span>*</span></label>
+            <input id="email" type="email" name="email" required/>
+         </div>
+         <div class="item">
+            <label for="address">Address<span>*</span></label>
+            <input id="address" type="address" name="address" required/>
+         </div>
+         <div class="item">
+            <label for="phone">Phone<span>*</span></label>
+            <input id="phone" type="number" name="phone" required/>
+         </div>
+        <div class="item">
+            <label for="job">Job Title<span>*</span></label>
+            <input id="job" type="text" name="job" required/>
+         </div>
+         <div class="btn-block">
+            <button type="submit" href="/">SUBMIT</button>
+         </div>
+    </form>
+</div>
+
+{% endblock %}

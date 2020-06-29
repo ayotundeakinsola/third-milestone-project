@@ -206,7 +206,7 @@ nav{
 
 .banner{
     position: relative;
-    background-image: url(../img/home.png);
+    background-image: url(../img/home.png)!important;
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
