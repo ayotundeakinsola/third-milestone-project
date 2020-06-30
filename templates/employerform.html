@@ -2,9 +2,9 @@
 
 <div class="testbox">
     <form action="{{ url_for('employer_form') }}" method="POST">
-         <p>Post A Vacancy</p>
+         <p class="cent">Post A Vacancy</p>
         <div class="question">
-            <label for="salutation">Salutation<span>*</span></label>
+            <label for="salutation">Salutation</label>
             <div class="question-answer">
                <div>
                   <input type="radio" value="none" id="radio_1" name="salutation"/>
@@ -29,7 +29,7 @@
             <input id="company_name" type="text" name="company_name" required/>
         </div>
         <div class="question">
-            <label for="size">Company Size<span>*</span></label>
+            <label for="size">Company Size</label>
             <div class="question-answer">
                <div>
                   <input type="radio" value="none" id="radio_3" name="size"/>
