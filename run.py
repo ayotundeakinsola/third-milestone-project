@@ -38,6 +38,10 @@ def employer_form():
         employ.insert_one(request.form.to_dict())
     return render_template('employerform.html', title='Submit your vacancy', employ=mongo.db.employer.find())
 
+@app.route('/vacancies')
+def vacancies():
+    return render_template("vacancy.html", title='Vacancy')
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
