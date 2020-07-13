@@ -261,6 +261,7 @@ nav{
       align-items: center;
       height: inherit;
       padding: 20px;
+      margin-top: 50px;
       }
 form { 
       padding: 20px;
@@ -563,8 +564,13 @@ a:hover {
 
 
 .pt-120 {
+    margin-top: 50px;
     padding-top: 120px;
     padding-bottom: 120px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 8px  #f22c2c; 
+    width: 100%;
 }
 
 .mb-30 {
