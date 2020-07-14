@@ -20,14 +20,10 @@ body{
   margin-left: 7px;
     }
 
-.logo{
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 22px;
-    padding-top: 20px;
-    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
-
-    }
+#logo {
+    height: 60px;
+    width: 70px;
+}
 
 nav{
     display: flex;
@@ -103,7 +99,7 @@ nav{
     }
     section.banner{
     position: relative;
-    background-image: url(../img/home.png);
+    background-image: url(../img/home.jpg);
     background-repeat: no-repeat;
     background-position: -10px center; 
     background-size: 110%;
