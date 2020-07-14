@@ -62,13 +62,13 @@ blockquote {
 
 ::-moz-selection {
   color: #fff;
-  background: #0085A1;
+  background: #f22c2c;
   text-shadow: none;
 }
 
 ::selection {
   color: #fff;
-  background: #0085A1;
+  background: #f22c2c;
   text-shadow: none;
 }
 
@@ -362,7 +362,7 @@ header.masthead .post-heading .meta a {
 }
 
 .floating-label-form-group-with-focus label {
-  color: #0085A1;
+  color: #f22c2c;
 }
 
 form .form-group:first-child .floating-label-form-group {

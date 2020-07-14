@@ -11,6 +11,9 @@
         <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="/docs/4.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="signin.css" rel="stylesheet">
+        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
     </head>
@@ -34,7 +37,7 @@
                     <a href="{{ url_for('contact') }}">Contact</a>
                 </li>
                 <li>
-                    <a href="{{ url_for('contact') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
+                    <a href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
                 </li>
             </ul>
                 <div class="burger">

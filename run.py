@@ -42,6 +42,10 @@ def employer_form():
 def vacancies():
     return render_template("vacancy.html", title='Vacancy')
 
+@app.route('/login')
+def login():
+    return render_template("login.html", title='Vacancy')
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=(os.environ.get('PORT')),
