@@ -2,7 +2,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
-import bcrypt
+from flask_bcrypt import Bcrypt
 
 app = Flask(__name__)
 
