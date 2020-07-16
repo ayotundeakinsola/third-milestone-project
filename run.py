@@ -1,9 +1,13 @@
 import os
-from flask import Flask, render_template, redirect, request, url_for
+from flask import Flask, render_template, redirect, request, url_for, session, flash
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId 
+import bcrypt
 
 app = Flask(__name__)
+
+# Set the secret key to some random bytes. Keep this really secret!
+app.secret_key = 'mysecret'
 
 app.config["MONGO_DBNAME"] = 'recruitment'
 app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-qowfo.mongodb.net/recruitment?retryWrites=true&w=majority'
@@ -42,9 +46,43 @@ def employer_form():
 def vacancies():
     return render_template("vacancy.html", title='Vacancy')
 
-@app.route('/login')
+@app.route('/login', methods = ['POST', 'GET'])
 def login():
-    return render_template("login.html", title='Vacancy')
+    if request.method== 'POST':
+        users = mongo.db.users
+        login_user = users.find_one({'name' : request.form['email']})
+
+        if login_user:
+            if bcrypt.hashpw(request.form['password'].encode ('utf-8'), login_user['password']) == login_user['password']:
+                session['email'] = request.form['email']
+                return redirect(url_for('index'))
+
+        return 'Invalid email/password combination'
+    
+    return render_template("login.html", title='Login')
+    
+@app.route('/logout')
+def logout():
+    session.pop('email', None)
+    flash('You were just logged out')
+    return redirect(url_for('index'))
+
+
+@app.route('/register', methods=['POST', 'GET'])
+def register():
+    if request.method== 'POST':
+        users = mongo.db.users
+        existing_user = users.find_one({'name': request.form['email']})
+
+        if existing_user is None:
+            hashpass = bcrypt.hashpw(request.form['password'].encode ('utf-8'), bcrypt.gensalt())
+            users.insert({'name': request.form['email'], 'password':hashpass})
+            session['email'] = request.form['email']
+            return redirect(url_for('login'))
+
+        return 'That email already exists!'
+
+    return render_template("register.html", title='Register')
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
