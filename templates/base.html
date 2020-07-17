@@ -9,43 +9,42 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type = "logo.png" href="{{ url_for('static', filename='img/logo3.png') }}"/>
         <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Raleway:wght@500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800&family=Raleway:wght@300;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/sign-in/">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
     </head>
     <body>
         <!-- Navigation -->
-        <nav>
-            <div class="logo"> 
-                  <a href="{{ url_for('index') }}" class="navbar-brand"><img id="logo" src="static/img/logo3.png" alt="logo"></a>
+        <nav class="navbar navbar-expand-lg" >
+                <a href="{{ url_for('index') }}" class="navbar-brand"><img id="logo" src="static/img/logo3.png" alt="logo"></a>
+                  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            <div class="collapse navbar-collapse navbar-expand-lg" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a  href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="{{ url_for('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a  href="{{ url_for('employers') }}">Employers</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="{{ url_for('contact') }}">Contact</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i></a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
+                                <a class="dropdown-item" href="{{ url_for('logout') }}">Logout <i class="fa fa-sign-out" style="font-size:15px"></i></a>
+                            </div>                      
+                   </li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li>
-                    <a  href="{{ url_for('index') }}">Home</a>
-                </li>
-                <li>
-                    <a  href="{{ url_for('about') }}">About</a>
-                </li>
-                <li>
-                    <a  href="{{ url_for('employers') }}">Employers</a>
-                </li>
-                <li>
-                    <a href="{{ url_for('contact') }}">Contact</a>
-                </li>
-                <li>
-                    <a href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
-                </li>
-                   <li>
-                    <a href="{{ url_for('logout') }}">Logout <i class="fa fa-sign-out" style="font-size:15px"></i></a>
-                </li>
-            </ul>
-                <div class="burger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
         </nav>
         {% block content %} {% endblock %}
         <hr>
@@ -87,10 +86,10 @@
         </footer>
 
         <!-- Bootstrap core JavaScript -->
-        <script src="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}"></script>
-        <script src="{{ url_for('static', filename='vendor/jquery/app.js') }}"></script>
-        <script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                
 
         <!-- Custom scripts for this template -->
         <script src="{{ url_for('static', filename='js/clean-blog.min.js') }}"></script>
