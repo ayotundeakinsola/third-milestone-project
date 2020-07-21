@@ -11,8 +11,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo
 
 
-import bcrypt
-
 app = Flask(__name__)
 
 # Set the secret key to some random bytes. Keep this really secret!
