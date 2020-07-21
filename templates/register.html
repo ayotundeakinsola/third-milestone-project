@@ -3,11 +3,21 @@
   <body class="text-center">
     <form class="form-signin"action="{{ url_for('register') }}" method="POST">
         <img class="mb-4" src="static/img/ruth.jpg" alt="" width="72" height="72">
-        <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required>
+        <h1 class="h3 mb-3 font-weight-normal form-signin-heading">Please Register</h1>
+        {{ form.hidden_tag() }}
+        
+        
+        <p class="logs"> {{ form.username.label }}<br>
+                	        {{ form.username }}
+        </p>
+
+        <p class="logs"> {{ form.email.label }}<br>
+            {{ form.email }}
+        </p>
+
+        <p class="logs"> {{ form.password.label }}
+            {{ form.password }}
+        </p>
         <button class="btn1 button1" type="submit">Register</button>
     </form>
 </body>
