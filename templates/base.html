@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/clean-blog.min.css') }}" type="text/css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" type="text/css" />
     </head>
+
     <body>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg" >
@@ -22,26 +23,39 @@
                   <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+                   <!-- flash messages -->
+                        {% with messages = get_flashed_messages() %}
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div class="row flashes">
+                                        <h4 class="flasher"> {{message}}</h4>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                        {% endwith %}
             <div class="collapse navbar-collapse navbar-expand-lg" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a  href="{{ url_for('index') }}">Home</a>
+                <ul class="navbar-nav ml-auto list-inline">
+                    <li class="nav-item list-inline-item">
+                        <a  href="{{ url_for('index', username=session['user']) }}">Home</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item list-inline-item">
                         <a  href="{{ url_for('about') }}">About</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item list-inline-item">
                         <a  href="{{ url_for('employers') }}">Employers</a>
                     </li>
-                    <li class="nav-item"> 
+                    <li class="nav-item list-inline-item"> 
                         <a href="{{ url_for('contact') }}">Contact</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i>{{session.username}}</a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
-                                <a class="dropdown-item" href="{{ url_for('logout') }}">Logout <i class="fa fa-sign-out" style="font-size:15px"></i></a>
-                            </div>                      
+                        <a class="dropdown-toggle" href="#" data-toggle="dropdown" ><i class="fa fa-user"></i> {{session['user']}}</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if session['logged_in'] == True %}
+                            <a class="dropdown-item" href="{{ url_for('logout') }}">Logout <i class="fa fa-sign-out" style="font-size:15px"></i></a>
+                            {% else %}
+                            <a class="dropdown-item" href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
+                            {% endif %}
+                        </div>                      
                    </li>
                 </ul>
             </div>
