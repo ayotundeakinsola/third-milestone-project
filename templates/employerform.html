@@ -4,16 +4,12 @@
     <form class="form-ef"action="{{ url_for('employer_form') }}" method="POST">
          <p class="cent">Post A Vacancy</p>
         <div class="question">
-            <label for="salutation">Salutation</label>
             <div class="question-answer">
-               <div>
+                  <label for="salutation">Salutation</label>                 
                   <input type="radio" value="Mr." id="radio_1" name="salutation"/>
                   <label for="radio_1" class="radio"><span>Mr.</span></label>
-               </div>
-               <div>
                   <input  type="radio" value="Mrs." id="radio_2" name="salutation"/>
                   <label for="radio_2" class="radio"><span>Mrs.</span></label>
-               </div>
             </div>
         </div>
          <div class="item">

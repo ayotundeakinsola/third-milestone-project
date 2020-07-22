@@ -98,6 +98,7 @@ def login():
     
 @app.route('/logout')
 def logout():
+    # remove user from session cookies
     flash("You have been logged out")
     session.pop("user", None)
     session.pop('logged_in', None)
