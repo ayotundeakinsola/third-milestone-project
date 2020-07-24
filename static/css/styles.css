@@ -110,6 +110,17 @@ body{
     display: flex;
     align-items: center;
     }
+    .listing{
+    position: relative;
+    background-image: url(../img/listing.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: 45%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    }
 
 .banner{
     position: relative;
@@ -490,9 +501,22 @@ h1, h3, h4, h5, h6 {
     display: block;
     }
     .navbar-nav > li{
-    padding-left:0;
+    padding-left:5px;
     padding-right:30px;
-    margin-left:-230px;
+    margin-left:5px;
+    }
+    .banner{
+    position: relative;
+    background: url(../img/home4.png) fixed;
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: calc(100vh - 62px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-width: 300px;
     }
 }
 
@@ -508,7 +532,7 @@ h1, h3, h4, h5, h6 {
     color: white;
     font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 20px;
     letter-spacing: 4px;
     line-height: 1.8em;
     }
@@ -518,9 +542,14 @@ h1, h3, h4, h5, h6 {
     color: white;
     font-family: 'Raleway',Helvetica,Arial,Lucida,sans-serif;
     font-weight: 700;
-    font-size: 20px!important;
+    font-size: 40px;
     line-height: 1.4em;
     display: block;
+    }
+    .navbar-nav > li{
+    padding-left:5px;
+    padding-right:30px;
+    margin-left:5px;
     }
 }
 

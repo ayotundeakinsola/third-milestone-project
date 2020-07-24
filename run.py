@@ -46,6 +46,10 @@ def employer_form():
 def vacancies():
     return render_template("vacancy.html", title='Vacancy')
 
+@app.route('/listing')
+def listing():
+    return render_template("listing.html", title='Listing')
+
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == "POST":
