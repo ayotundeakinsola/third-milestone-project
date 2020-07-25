@@ -2,7 +2,7 @@
     <section class="listing">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">
+                <div class="col-sm-12 listhead">
                     <h4 class="subhead">Digital Marketer</h4>
                     <p class="mainhead">Ziggo - Athens, Greece</p>
                     <div class="buttons">
@@ -13,8 +13,8 @@
         </div>
     </section>
     <section>
-            <div id="imggame">
-            <img src="/static/img/logo3.png" class="imggame" width="300px" height="400px">
+            <div id="imggame" class="col-12">
+            <img src="static/img/ziggo.png" class="imggame" width="300px" height="400px">
             <div class="innertext">
                 <h3 class="joblist">Ziggo</h3>
                 <p class="inlist">Remote - Fulltime Position</p>
@@ -24,33 +24,42 @@
             </div>
         </div>
     </section>
-    <div class="row rows row_2">
-        <div class="col-md-12 column">
+    <div class="row rows">
+        <div class="col-12">
             <div class="text2">
                 <div class="description">
-                    <h2 class="head">Job Hunting?</h2>
-                    <div>
+                    <h4>Job Description</h4>
+                    <p class="inlist3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
                         Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button type="button" class="btn1 button1"><a class="links" href="#" data-icon="&#x24;">Open Roles</a></button>
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="col-md-6 column">
+        <div class="col-12">
             <div class="text2">
                 <div class="description">
-                    <h2 class="head">Talent Searching?</h2>
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                    </div>
-                </div>
-                <div class="buttons">
-                    <button type="button" class="btn1 button1"><a class="links" href="#" data-icon="&#x24;">Post A Job</a></button>
+                    <h4>Responsibilities</h4>
+                    <p class="inlist3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                    </p>
                 </div>
             </div>
         </div>
+        <div class="col-12">
+            <div class="text2">
+                <div class="description">
+                    <h4>Qualifications</h4>
+                    <p class="inlist3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                    </p>
+                </div>
+            </div>
+        </div>
+            <div class="buttons">
+                    <button type="button" class="btn4 button1"><a class="links" href="{{ url_for('employer_form') }}" data-icon="&#x24;">I'M INTERESTED</a></button>
+            </div>   
     </div>
 {% endblock %}
