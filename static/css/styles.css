@@ -526,6 +526,19 @@ h1, h3, h4, h5, h6 {
     max-width: 100%;
     min-width: 300px;
     }
+    .listing{
+    position: relative;
+    background-image: url(../img/listing.jpg);
+    background-repeat: no-repeat;
+    background-position: center; 
+    background-size: cover;
+    height: calc(100vh - 62px);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    min-width: 300px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
