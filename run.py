@@ -3,14 +3,18 @@ from flask import Flask, render_template, redirect, request, url_for, session, f
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from os import path
+if path.exists("env.py"):
+  import env 
 
 app = Flask(__name__)
 
-# Set the secret key to some random bytes. Keep this really secret!
-app.secret_key = 'mysecret'
+# ---- CONFIG ----- #
 
-app.config["MONGO_DBNAME"] = 'recruitment'
-app.config["MONGO_URI"] = 'mongodb+srv://root:r00tUser@myfirstcluster-qowfo.mongodb.net/recruitment?retryWrites=true&w=majority'
+# Set the secret key to some random bytes. Keep this really secret!
+app.secret_key = os.environ.get("SECRET_KEY")
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+app.config['MONGODB_NAME'] = os.environ.get('MONGODB_NAME')
 
 mongo = PyMongo(app)
 
