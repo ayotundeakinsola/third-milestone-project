@@ -825,6 +825,7 @@ input[type=checkbox]:checked + label:after {
     margin-top: -30px;
     color: #666;
     font-size: 16px;
+    margin-bottom: 200px;
 }
 
 .inlist5{
@@ -910,4 +911,8 @@ html{
 
 #section1{
     padding-top: 100px;
+}
+
+.logo1{
+    margin-top: 50px;
 }
