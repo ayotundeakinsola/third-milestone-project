@@ -1,0 +1,44 @@
+{% extends "base.html" %} {% block content %}
+
+<div class="testbox">
+    <form class="form-ef"action="{{ url_for('candidate_form') }}" method="POST">
+         <p class="cent">Submit Your Vacancy</p>
+        <div class="question">
+            <div class="question-answer">
+                  <label for="salutation">Salutation</label>                 
+                  <input type="radio" value="Mr." id="radio_1" name="salutation"/>
+                  <label for="radio_1" class="radio"><span>Mr.</span></label>
+                  <input  type="radio" value="Mrs." id="radio_2" name="salutation"/>
+                  <label for="radio_2" class="radio"><span>Mrs.</span></label>
+            </div>
+        </div>
+         <div class="item">
+            <label for="first_name">First Name<span>*</span></label>
+            <input id="first_name" type="text" name="first_name" required/>
+        </div>
+        <div class="item">
+            <label for="last_name">Last Name<span>*</span></label>
+            <input id="last_name" type="text" name="last_name" required/>
+        </div>
+         <div class="item">
+            <label for="email">Email Address<span>*</span></label>
+            <input id="email" type="email" name="email" required/>
+         </div>
+         <div class="item">
+            <label for="phone">Phone<span>*</span></label>
+            <input id="phone" type="number" name="phone" required/>
+         </div>
+        <div class="item">
+            <label for="job">Job Title<span>*</span></label>
+            <input id="job" type="text" name="job" required/>
+         </div>
+        <div class="item">
+             <input type="file" name="file" accept="file/*">
+         </div>
+         <div class="btnblock">
+            <button class= "btn-ef" type="submit" href="/">Apply</button>
+         </div>
+    </form>
+</div>
+
+{% endblock %}

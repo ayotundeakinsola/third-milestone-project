@@ -44,7 +44,18 @@ def employer_form():
     if request.method == 'POST':
         employ = mongo.db.employer
         employ.insert_one(request.form.to_dict())
-    return render_template('employerform.html', title='Submit your vacancy', employ=mongo.db.employer.find())
+        flash("Your vacancy has been received!")
+        return redirect(url_for("index"))
+    return render_template('employerform.html', title='Post A Job', employ=mongo.db.employer.find())
+
+@app.route('/candidate_form', methods=['GET', 'POST'])
+def candidate_form():
+    if request.method == 'POST':
+        candidate = mongo.db.candidates
+        candidate.insert_one(request.form.to_dict())
+        flash("Your application has been received!")
+        return redirect(url_for("index"))
+    return render_template('candidateform.html', title='Submit Your Vacancy', candidate=mongo.db.candidates.find())
 
 @app.route('/vacancies')
 def vacancies():
