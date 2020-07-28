@@ -558,8 +558,11 @@ h1, h3, h4, h5, h6 {
     }
     textarea.form-control {
     height: auto;
-    width: 255%!important;
+    width: 220%!important;
     }
+    .btn-block+.btn-block {
+    margin-top: 0.1rem!important;
+}
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
