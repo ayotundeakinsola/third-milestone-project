@@ -21,9 +21,8 @@ body{
     }
 
 .navbar-nav > li{
-  padding-left:30px;
-  padding-right:30px;
   margin-left:30px;
+  margin-right: 118px;
 }
 
 .navicon {
@@ -174,8 +173,7 @@ body{
       justify-content: center;
       align-items: center;
       height: inherit;
-      padding: 20px;
-      padding-top: 70px;
+      padding: 70px 0;
       background: #f5f5f5;
       }
 .form-ef { 
@@ -200,6 +198,7 @@ p.cent{
 .item span {
       color: red;
       }
+
 .item i {
       right: 1%;
       top: 30px;
@@ -281,11 +280,15 @@ input[type=radio]:checked + label:after {
       background: #F45656;
       }
 
+.btn:hover {
+    color: #F45656;
+    text-decoration: none;
+}
 /* Home page button*/
 .btns{
     text-align: center;
     text-decoration: none;
-    width: 27%;
+    width: 30%;
     }
 
 .btn1{
@@ -626,6 +629,15 @@ a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    border-bottom: 1px solid#808080;
+}
+
+.single-job-items:last-child{
+    padding: 36px 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 0px ;
 }
 
 .job-items {
@@ -675,14 +687,13 @@ li {
     line-height: 1.8;
 }
 
-.items-link p {
-    display: block;
-    border: 1px solid #333;
-    border-radius: 30px;
-    padding: 4px 33px;
-    text-align: center;
-    margin-bottom: 25px;
-    margin-top: -1px;
+.items-link  {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: #5e5e5e;
+    font-size: 14px;
+    margin-bottom: 30px;
 }
 
 select {
@@ -872,11 +883,9 @@ input[type=checkbox]:checked + label:after {
 }
 
 #imggame {
-    padding-top: 80px;
     margin-right: 100px;
     float: left;
     margin-top: -60px;
-    margin-bottom: -120px;
 }
 
 #imggame:after {
@@ -890,7 +899,7 @@ input[type=checkbox]:checked + label:after {
     border-style: none;
     padding-top: 155px;
     padding-right: 50px;
-    margin-top: -100px;
+    margin-top: -50px;
 }
 
 .imggame2{
@@ -937,7 +946,7 @@ ul.a {
 /* Width of text area in contact form*/
 textarea.form-control {
     height: auto;
-    width: 394%;
+    width: 300%;
 }
 
 /*Smooth Scrolling*/
@@ -951,4 +960,8 @@ html{
 
 .logo1{
     margin-top: 50px;
+}
+
+.listrow{
+    display: inline-block; 
 }

@@ -54,6 +54,7 @@
                             <a class="dropdown-item" href="{{ url_for('logout') }}">Logout <i class="fa fa-sign-out" style="font-size:15px"></i></a>
                             {% else %}
                             <a class="dropdown-item" href="{{ url_for('login') }}">Login <i class="fa fa-sign-in" style="font-size:15px"></i></a>
+                            <a class="dropdown-item" href="{{ url_for('register') }}">Sign Up <i class="fa fa-user-plus" style="font-size:15px"></i></a>
                             {% endif %}
                         </div>                      
                    </li>
@@ -61,7 +62,6 @@
             </div>
         </nav>
         {% block content %} {% endblock %}
-        <hr>
 
         <!-- Footer -->
         <footer>

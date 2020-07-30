@@ -33,11 +33,21 @@ def candidate():
 
 @app.route('/employers')
 def employers():
-    return render_template("employers.html", employ=mongo.db.employer.find(), title='Employers')
+    return render_template("employers.html", title='Employers')
 
 @app.route('/contact')
 def contact():
     return render_template("contact.html", title='Contact')
+
+
+@app.route('/vacancies')
+def vacancies():
+    return render_template("vacancy.html", title='Vacancy', employ=mongo.db.employer.find())
+
+@app.route('/listing')
+def listing():
+    return render_template("listing.html", title='Listing', employ=mongo.db.employer.find())
+
 
 @app.route('/employer_form', methods=['GET', 'POST'])
 def employer_form():
@@ -45,8 +55,37 @@ def employer_form():
         employ = mongo.db.employer
         employ.insert_one(request.form.to_dict())
         flash("Your vacancy has been received!")
-        return redirect(url_for("index"))
-    return render_template('employerform.html', title='Post A Job', employ=mongo.db.employer.find())
+        return redirect(url_for("vacancies"))
+    return render_template('employerform.html', title='Post A Job')
+
+@app.route('/edit_job/<employer_id>')
+def edit_job(employer_id):
+    the_job =  mongo.db.employer.find_one({"_id": ObjectId(employer_id)})
+    return render_template('editemployerform.html', employer=the_job, title='Edit A Job')
+
+@app.route('/update_job/<employer_id>', methods=['POST'])
+def update_job(employer_id):
+    employ = mongo.db.employer
+    employ.update( {'_id': ObjectId(employer_id)},
+    {
+        'salutation':request.form.get('salutation'),
+        'first_name':request.form.get('first_name'),
+        'last_name': request.form.get('last_name'),
+        'company_name': request.form.get('company_name'),
+        'size':request.form.get('size'),
+        'employment': request.form.get('employment'),
+        'salary': request.form.get('salary'),
+        'email':request.form.get('email'),
+        'address':request.form.get('address'),
+        'phone': request.form.get('phone'),
+        'job': request.form.get('job')
+    })
+    return redirect(url_for('vacancies'))
+
+@app.route('/delete_job/<employer_id>')
+def delete_task(employer_id):
+    mongo.db.employer.remove({'_id': ObjectId(employer_id)})
+    return redirect(url_for('vacancies'))
 
 @app.route('/candidate_form', methods=['GET', 'POST'])
 def candidate_form():
@@ -57,13 +96,14 @@ def candidate_form():
         return redirect(url_for("index"))
     return render_template('candidateform.html', title='Submit Your Vacancy', candidate=mongo.db.candidates.find())
 
-@app.route('/vacancies')
-def vacancies():
-    return render_template("vacancy.html", title='Vacancy')
-
-@app.route('/listing')
-def listing():
-    return render_template("listing.html", title='Listing')
+@app.route('/contactus_form', methods=['GET', 'POST'])
+def contactus_form():
+    if request.method == 'POST':
+        contact = mongo.db.contacts
+        contact.insert_one(request.form.to_dict())
+        flash("We would be in contact with you!")
+        return redirect(url_for("index"))
+    return render_template('contact.html', title='Contact', contact=mongo.db.contacts.find())
 
 @app.route('/register', methods=['POST', 'GET'])
 def register():
@@ -84,7 +124,6 @@ def register():
         mongo.db.users.insert_one(register)
 
         #Put the new user into 'session' cookie
-        session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("index"))
     return render_template('register.html', title='Register')

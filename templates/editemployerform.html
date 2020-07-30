@@ -1,46 +1,46 @@
 {% extends "base.html" %} {% block content %}
 
 <div class="testbox">
-    <form class="form-ef"action="{{ url_for('employer_form') }}" method="POST">
-         <p class="cent">Post A Vacancy</p>
+    <form class="form-ef" action="{{ url_for('update_job',employer_id=employer._id) }}" method="POST">
+         <p class="cent">Edit A Vacancy</p>
         <div class="question">
             <div class="question-answer">
                   <label for="salutation">Salutation</label>                 
-                  <input type="radio" value="Mr." id="radio_1" name="salutation"/>
+                  <input type="radio" value="{{employer.salutation}}" id="radio_1" name="salutation"/>
                   <label for="radio_1" class="radio"><span>Mr.</span></label>
-                  <input  type="radio" value="Mrs." id="radio_2" name="salutation"/>
+                  <input  type="radio" value="{{employer.salutation}}" id="radio_2" name="salutation"/>
                   <label for="radio_2" class="radio"><span>Mrs.</span></label>
             </div>
         </div>
          <div class="item">
             <label for="first_name">First Name<span>*</span></label>
-            <input id="first_name" type="text" name="first_name" required/>
+            <input id="first_name" type="text" name="first_name" value="{{employer.first_name}}" required/>
         </div>
         <div class="item">
             <label for="last_name">Last Name<span>*</span></label>
-            <input id="last_name" type="text" name="last_name" required/>
+            <input id="last_name" type="text" name="last_name" value="{{employer.last_name}}" required/>
         </div>
         <div class="item">
             <label for="company_name">Company Name<span>*</span></label>
-            <input id="company_name" type="text" name="company_name" required/>
+            <input id="company_name" type="text" name="company_name" value="{{employer.company_name}}" required/>
         </div>
         <div class="question">
             <label for="size">Company Size</label>
             <div class="question-answer">
                <div>
-                  <input type="radio" value="Less than 10 employees" id="radio_3" name="size"/>
+                  <input type="radio" value="{{employer.size}}" id="radio_3" name="size" />
                   <label for="radio_3" class="radio"><span>Less than 10 employees</span></label>
                </div>
                <div>
-                  <input  type="radio" value="10 - 50 employees" id="radio_4" name="size"/>
+                  <input  type="radio" value="{{employer.size}}" id="radio_4" name="size"/>
                   <label for="radio_4" class="radio"><span>10 - 50 employees</span></label>
                </div>
                 <div>
-                  <input  type="radio" value="50 - 250 employees" id="radio_5" name="size"/>
+                  <input  type="radio" value="{{employer.size}}" id="radio_5" name="size"/>
                   <label for="radio_5" class="radio"><span>50 - 250 employees</span></label>
                </div>
                 <div>
-                  <input  type="radio" value="more than 250 employees" id="radio_6" name="size"/>
+                  <input  type="radio" value="{{employer.size}}" id="radio_6" name="size"/>
                   <label for="radio_6" class="radio"><span>more than 250 employees</span></label>
                </div>
             </div>
@@ -48,42 +48,40 @@
         <div class="question">
             <label for="salutation">Employment:</label> 
             <div class="question-answer">                
-                  <input type="radio" value="Full Time" id="radio_11" name="employment"/>
+                  <input type="radio" value="{{employer.employment}}" id="radio_11" name="employment"/>
                   <label for="radio_11" class="radio"><span>Full Time</span></label>
-                  <input  type="radio" value="Part Time" id="radio_12" name="employment"/>
+                  <input  type="radio" value="{{employer.employment}}" id="radio_12" name="employment"/>
                   <label for="radio_12" class="radio"><span>Part Time</span></label>
             </div>
         </div>
         <div class="question">
             <label for="Salary">Salary:</label>
             <div class="question-answer">
+                    <input type="radio" value="{{employer.salary}}" id="radio_7" name="salary"/>
                     <label for="radio_7" class="radio"><span>$1,000</span></label>
-                    <input type="radio" value="$1000" id="radio_7" name="salary"/>
+                    <input  type="radio" value="{{employer.salary}}" id="radio_8" name="salary"/>
                     <label for="radio_8" class="radio"><span>$1,000 - $2,500</span></label>     
-                    <input  type="radio" value="$1,000 - $2,500" id="radio_8" name="salary"/>
+                    <input  type="radio" value="{{employer.salary}}" id="radio_9" name="salary"/>
                     <label for="radio_9" class="radio"><span>$2,500 - $5,000</span></label>
-                    <input  type="radio" value="$1,000 - $2,500" id="radio_9" name="salary"/>
+                    <input  type="radio" value="{{employer.salary}}" id="radio_10" name="salary"/>
                     <label for="radio_10" class="radio"><span>more than $5,000</span></label>           
-                    <input  type="radio" value="more than $5,000" id="radio_10" name="salary"/>
-                  
-
             </div>
         </div>
          <div class="item">
             <label for="email">Email Address<span>*</span></label>
-            <input id="email" type="email" name="email" required/>
+            <input id="email" type="email" name="email" value="{{employer.email}}" required/>
          </div>
          <div class="item">
             <label for="address">Address<span>*</span></label>
-            <input id="address" type="address" name="address" required/>
+            <input id="address" type="address" name="address" value="{{employer.address}}" required/>
          </div>
          <div class="item">
             <label for="phone">Phone<span>*</span></label>
-            <input id="phone" type="number" name="phone" required/>
+            <input id="phone" type="number" name="phone" value="{{employer.phone}}" required/>
          </div>
         <div class="item">
             <label for="job">Job Title<span>*</span></label>
-            <input id="job" type="text" name="job" required/>
+            <input id="job" type="text" name="job" value="{{employer.job}}" required/>
          </div>
          <div class="btnblock">
             <button class= "btn-ef" type="submit" href="/">SUBMIT</button>

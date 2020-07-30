@@ -1,69 +1,83 @@
 {% extends 'base.html' %} {% block content %}
-    <section class="listing">
+    {% for employer in employ %}
+        <section class="listing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <h4 class="subhead">{{employer.job}}</h4>
+                        <p class="mainhead">{{employer.address}}</p>
+                        <div class="buttons">
+                            <a class="btn links btn3 button3" href="{{ url_for('candidate_form') }}" data-icon="&#x24;">Apply Now</a>
+                        </div>                            
+                    </div>
+                </div>
+            </div>
+        </section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                    <h4 class="subhead">Digital Marketer</h4>
-                    <p class="mainhead">Ziggo - Athens, Greece</p>
-                    <div class="buttons">
-                        <a class="btn links btn3 button3" href="{{ url_for('candidate_form') }}" data-icon="&#x24;">Apply Now</a>
-                    </div>                            
+                <div class="col-lg-12 col-md-12 col-sm-12" id="imggame">
+                    <img src="static/img/ziggo.png" class="imggame" width="300px" height="400px">
+                        <div class="innertext">
+                            <h3 class="joblist">Ziggo</h3>
+                            <p class="inlist">Remote - {{employer.employment}} Position</p>
+                            <p class="inlist2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                            </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12" id="imggame">
-                <img src="static/img/ziggo.png" class="imggame" width="300px" height="400px">
-                    <div class="innertext">
-                        <h3 class="joblist">Ziggo</h3>
-                        <p class="inlist">Remote - Fulltime Position</p>
-                        <p class="inlist2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                        </p>
-                </div>
-            </div>
-        </div>
-        <hr class="featurette-divider">
+            <hr class="featurette-divider">
 
-    </div>
-    <div class="row rows">
-        <div class="col-12">
-            <div class="text2">
-                <div class="description">
-                    <h4 style="text-align:left">Job Description</h4>
-                    <p class="inlist5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                    </p>
+        </div>
+        <div class="row rows">
+            <div class="col-12">
+                <div class="text2">
+                    <div class="description">
+                        <h4 style="text-align:left">Job Description</h4>
+                        <p class="inlist5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12">
-            <div class="text2">
-                <div class="description">
-                    <h4 style="text-align:left">Responsibilities</h4>
-                    <p class="inlist5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                    </p>
+            <div class="col-12">
+                <div class="text2">
+                    <div class="description">
+                        <h4 style="text-align:left">Responsibilities</h4>
+                        <p class="inlist5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-12">
-            <div class="text2">
-                <div class="description">
-                    <h4 style="text-align:left">Qualifications</h4>
-                    <p class="inlist5">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
-                        Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
-                    </p>
+            <div class="col-12">
+                <div class="text2">
+                    <div class="description">
+                        <h4 style="text-align:left">Qualifications</h4>
+                        <p class="inlist5">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis purus sed risus euismod, ac accumsan lectus congue. 
+                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce quis mauris turpis.
+                        </p>
+                    </div>
                 </div>
             </div>
+                <div class="container ">
+                    {% if session['logged_in'] == True %}
+                    <div class="buttons listrow">
+                        <a class="btn links btn4 button1" href="{{ url_for('edit_job',employer_id=employer._id) }}" role="button">Edit</a>
+                    </div> 
+                    <div class="buttons listrow">
+                        <a class="btn links btn4 button1" href="{{ url_for('delete_job',employer_id=employer._id) }}" role="button">Delete</a>
+                    </div>
+                    {% else %}
+                    <div class="buttons listrow">
+                        <a class="btn links btn4 button1" href="{{ url_for('candidate_form') }}" role="button">I'm Interested</a>
+                    </div>   
+                    {% endif %}
+                    
+                </div> 
         </div>
-            <div class="buttons">
-                <a class="btn links btn4 button1" href="{{ url_for('candidate_form') }}" role="button">I'M INTERESTED</a>
-            </div>   
-    </div>
+    {% endfor %}
 {% endblock %}
