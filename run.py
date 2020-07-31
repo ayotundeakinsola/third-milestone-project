@@ -44,10 +44,10 @@ def contact():
 def vacancies():
     return render_template("vacancy.html", title='Vacancy', employ=mongo.db.employer.find())
 
-@app.route('/listing')
-def listing():
-    return render_template("listing.html", title='Listing', employ=mongo.db.employer.find())
-
+@app.route('/listing/<employer_id>')
+def listing(employer_id):
+    the_list =  mongo.db.employer.find_one({"_id": ObjectId(employer_id)})
+    return render_template('listing.html', employer=the_list, title='Listing')
 
 @app.route('/employer_form', methods=['GET', 'POST'])
 def employer_form():
@@ -83,7 +83,7 @@ def update_job(employer_id):
     return redirect(url_for('vacancies'))
 
 @app.route('/delete_job/<employer_id>')
-def delete_task(employer_id):
+def delete_job(employer_id):
     mongo.db.employer.remove({'_id': ObjectId(employer_id)})
     return redirect(url_for('vacancies'))
 

@@ -8,10 +8,10 @@
                     <div class="single-job-items mb-30">
                             <div class="job-items">
                             <div class="company-img">
-                                <img class="img-vac" src="static/img/ziggo.png" alt="">
+                                <img class="img-vac" src="{{ url_for('static', filename='img/ziggo.png') }}" alt="">
                             </div>
                             <div class="job-tittle">
-                                <a href="{{ url_for('listing') }}">
+                                <a href="{{ url_for('listing',employer_id=employer._id) }}">
                                     <h4>{{employer.job}}</h4>
                                 </a>
                                 <ul>
