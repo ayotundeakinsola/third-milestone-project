@@ -11,10 +11,10 @@ If talents believe in what you believe, it is possible to build a strong brand a
 
 ## Table of Contents
 1. [UX](#ux)
-    - [Goals](#goals)
-        - [Visitor Goals](#visitor-goals)
-        - [Business Goals](#business-goals)
-        - [Family Hub Goals](#family-hub-goals)
+    - [Objectives](#objectives)
+        - [Visitor Objectives](#visitor-objectives)
+        - [Business Objectives](#business-objectives)
+        - [AR Agency Objectives](#AR-Agency-objectives)
     - [User Stories](#user-stories)
         - [Visitor Stories](#visitor-stories)
         - [Business Stories](#business-stories)
@@ -70,9 +70,9 @@ If talents believe in what you believe, it is possible to build a strong brand a
 
 # UX
 
-## Goals
+## Objectives
 
-### Visitor Goals
+### Visitor Objectives
 
 The central target audience for AR Agency are:
 - Stdents looking for a student jobs.
@@ -80,7 +80,7 @@ The central target audience for AR Agency are:
 - High Skilled Migrants
 - Graduates.
 
-User goals are:
+User Objectives are:
 
 - Job seekers have a place to search for jobs in the Netherlands, that offers its listings in both Dutch & English.
 
@@ -88,6 +88,29 @@ User goals are:
 
 - Saves time of both Employers and prospective candidates.
 
+- Job seekers would be helped through the application process. 
+
+- Candidates can be sure they have access to more opportunities
+
+- Users can have their data stored so they can be contacted for jobs at anytime. 
+
+AR Agency is a great way to meet user needs because:
+
+- AR recruitment agency has access to the best talent available
+
+- AR recruitment agency saves time because they take care of the initial steps in the hiring process. 
+
+- AR Recruitment agency conducts background checks on candidates, which is essential when considering potential employees
+
+### Business Objectives 
+
+- Searching for specialised & executive roles
+
+- Fulfil both short & long term needs
+
+- Provide a pipeline full of talent to make business decisions.
+
+- Recruiting agencies are partners, not foes
 
 
 
