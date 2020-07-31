@@ -30,18 +30,14 @@ If talents believe in what you believe, it is possible to build a strong brand a
     - [Existing Features](#existing-features)
         - [Elements on every Page](#elements-on-every-page)
         - [Home Page](#home-page)
-        - [Activities Page](#activities-page)
-        - [Listing Page](#listing-page)
-        - [Create Account Page](#create-account-page)
-        - [Log In Page](#log-in-page)
-        - [Account Settings Page](#account-settings-page)
-        - [Account Page](#account-page)
-        - [Add new Listing Page](#add-new-listing-page)
-        - [Preview Listing Page](#preview-listing-page)
-        - [Edit Listing Page](#edit-listing-page)
+        - [About Page](#about-page)
+        - [Employers Page](#employers-page)
         - [Contact Page](#contact-page)
-        - [404 Page](#404-page)
-        - [Permission Denied Page](#permission-denied-page)
+        - [Login Page](#log-in-page)
+        - [Sign Up Page](#sign-up-page)
+        - [Listing Page](#listing-page)
+        - [Employer Form Page](#employer-form-page)
+        - [Vacancy Page](#vacancy-page)
     - [Features Left to Implement](#features-left-to-implement)
 
 3. [Information Architecture](#information-architecture)
@@ -222,3 +218,19 @@ But I included this document in the project to provide insight into the original
 - Footer
     - The footer features:
         - Links to social media locations (which are facebook, twitter, linkedin and youtube ).
+
+### Home Page
+<div align="center">
+<img src="static/img/tagline.png" alt="AR Agency home page on all major screen sizes" >
+</div>
+
+- The AR Home page features a colorful image of myself. I had earlier chosen a different picture but my wife convinced me to go ahead with this.. 
+I chose this image because it is eye catching and striking, and it shows that AR Agency is ready for business.  
+This image was coded as a background-image in css and set to `background-size: cover;` so that it is responsive while never getting stretched or distorted. 
+
+### About Page
+
+<div align="center">
+<img src="static/img/aboutline.png" alt="AR Agency about page on all major screen sizes" >
+</div>
+
