@@ -181,11 +181,10 @@ As a visitor to AR Agency I expect/want/need:
 
 The wireframe was created using [Figma](https://www.figma.com/) during the conceptul phase and project proposal to my mentor. 
 
-You can find the wireframe [here](static/doc/wireframe.pdf).
-.
+You can find the wireframe [here](https://1drv.ms/b/s!AqARRU4jO5elunG2T1AiA9FteWuU?e=YpZqiG).
 
 ### PDF
-- [AR Agency Database Schema](static/doc/Database_Schema.docx)
+- [AR Agency Database Schema](https://1drv.ms/w/s!AqARRU4jO5elum9rLOwV2MQQhDVB?e=k80UdK)
 
 This document was created during the planning phase of this project. The final website has some slight differences from what was planned. 
 But I included this document in the project to provide insight into the original planning and direction of the site during the planning stages.  
