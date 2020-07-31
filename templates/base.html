@@ -19,7 +19,7 @@
     <body>
         <!-- Navigation -->
         <nav class="navbar navbar-expand-lg" >
-                <a href="{{ url_for('index') }}" class="navbar-brand"><img id="logo" src="static/img/logo3.png" alt="logo"></a>
+                <a href="{{ url_for('index') }}" class="navbar-brand"><img id="logo" src="{{ url_for('static', filename='img/logo3.png') }}" alt="logo"></a>
                   <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

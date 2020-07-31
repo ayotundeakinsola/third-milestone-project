@@ -28,8 +28,12 @@
             <label for="size">Company Size</label>
             <div class="question-answer">
                <div>
-                  <input type="radio" value="{{employer.size}}" id="radio_3" name="size" />
-                  <label for="radio_3" class="radio"><span>Less than 10 employees</span></label>
+                    {% if employer.size == "Less than 10 employees" %}
+                    <input type="radio" value="Less than 10 employees" id="radio_3" name="size" />
+                    {% else %}
+                    <input type="radio" value="Less than 10 employees" id="radio_3" name="size"/>
+                    {% endif %}
+                    <label for="radio_3" class="radio"><span>Less than 10 employees</span></label>
                </div>
                <div>
                   <input  type="radio" value="{{employer.size}}" id="radio_4" name="size"/>
@@ -47,23 +51,47 @@
         </div>
         <div class="question">
             <label for="salutation">Employment:</label> 
-            <div class="question-answer">                
-                  <input type="radio" value="{{employer.employment}}" id="radio_11" name="employment"/>
+            <div class="question-answer">
+                  {% if employer.employment == "Full Time" %}                
+                  <input type="radio" value="Full Time" id="radio_11" name="employment"/>
+                  {% else %}
+                  <input type="radio" value="Full Time" id="radio_11" name="employment"/>
+                  {% endif %}
                   <label for="radio_11" class="radio"><span>Full Time</span></label>
-                  <input  type="radio" value="{{employer.employment}}" id="radio_12" name="employment"/>
+                  {% if employer.employment == "Part Time" %} 
+                  <input  type="radio" value="Part Time" id="radio_12" name="employment"/>
+                  {% else %}
+                  <input  type="radio" value="Part Time" id="radio_12" name="employment"/>
+                  {% endif %}
                   <label for="radio_12" class="radio"><span>Part Time</span></label>
             </div>
         </div>
         <div class="question">
             <label for="Salary">Salary:</label>
             <div class="question-answer">
-                    <input type="radio" value="{{employer.salary}}" id="radio_7" name="salary"/>
+                    {% if employer.salary == "$1000" %}
+                    <input type="radio" value="$1000" id="radio_7" name="salary"/>
+                    {% else %}
+                    <input type="radio" value="$1000" id="radio_7" name="salary"/>
+                    {% endif %}
                     <label for="radio_7" class="radio"><span>$1,000</span></label>
-                    <input  type="radio" value="{{employer.salary}}" id="radio_8" name="salary"/>
-                    <label for="radio_8" class="radio"><span>$1,000 - $2,500</span></label>     
-                    <input  type="radio" value="{{employer.salary}}" id="radio_9" name="salary"/>
+                    {% if employer.salary == "$1,000 - $2,500" %}
+                    <input  type="radio" value="$1,000 - $2,500" id="radio_8" name="salary"/>
+                    {% else %}
+                    <input  type="radio" value="$1,000 - $2,500" id="radio_8" name="salary"/>
+                    {% endif %}
+                    <label for="radio_8" class="radio"><span>$1,000 - $2,500</span></label>
+                    {% if employer.salary == "$2,500 - $5,000" %}    
+                    <input  type="radio" value="$2,500 - $5,000" id="radio_9" name="salary"/>
+                    {% else %}
+                    <input  type="radio" value="$2,500 - $5,000" id="radio_9" name="salary"/>
+                    {% endif %}
                     <label for="radio_9" class="radio"><span>$2,500 - $5,000</span></label>
-                    <input  type="radio" value="{{employer.salary}}" id="radio_10" name="salary"/>
+                    {% if employer.salary == "more than $5,000" %}
+                    <input  type="radio" value="more than $5,000" id="radio_10" name="salary"/>
+                    {% else %}
+                    <input  type="radio" value="more than $5,000" id="radio_10" name="salary"/>
+                    {% endif %}
                     <label for="radio_10" class="radio"><span>more than $5,000</span></label>           
             </div>
         </div>

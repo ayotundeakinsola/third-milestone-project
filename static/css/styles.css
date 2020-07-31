@@ -51,7 +51,7 @@ body{
 .nav-active{
     transform: translateX(0%);
 }
-
+/*Hamburger menu for mobile view*/
 @keyframes navlinkfade{
     from{
         opacity: 0;
@@ -74,7 +74,7 @@ body{
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-5px);
 }
-  /* The banner section */
+  /* styling for the banner of each html page*/
   .contact{
     position: relative;
     background-image: url(../img/contact.png);
@@ -115,7 +115,7 @@ body{
     background-repeat: no-repeat;
     background-position: center; 
     background-size: cover;
-    height: 45%;
+    height: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -167,7 +167,7 @@ body{
     display: block;
 }
 
-  /* Form */
+  /* Form styling */
 .testbox {
       display: flex;
       justify-content: center;
@@ -276,6 +276,7 @@ input[type=radio]:checked + label:after {
       color: #fff;
       cursor: pointer;
       }
+/*Hover for buttons and links*/
 .btn-ef:hover {
       background: #F45656;
       }
@@ -284,11 +285,20 @@ input[type=radio]:checked + label:after {
     color: #F45656;
     text-decoration: none;
 }
+a:focus, a:hover {
+    color: #F45656;
+}
 /* Home page button*/
 .btns{
     text-align: center;
     text-decoration: none;
     width: 30%;
+    }
+/*style for smaller buttons*/
+.btns1{
+    text-align: center;
+    text-decoration: none;
+    width: 20%;
     }
 
 .btn1{
@@ -819,8 +829,8 @@ input[type=checkbox]:checked + label:after {
 
 .innertext{
     position: relative;
-    margin-top: -265px;
-    margin-left: 500px
+    margin-top: -250px;
+    margin-left: 300px;
 }
 
 .innertext2{
@@ -829,6 +839,7 @@ input[type=checkbox]:checked + label:after {
     margin-left: 10px
 }
 
+/*Inslist are the styling for my paragraphs*/
 
 .inlist{
     color: #666;
@@ -875,6 +886,12 @@ input[type=checkbox]:checked + label:after {
     line-height: 1.5em;
 }
 
+.inlist7{
+    margin-top: -30px;
+    color: #666;
+    font-size: 16px;
+    margin-left: -60px;
+}
 
 .img-list{
     display: inline-block;
@@ -885,7 +902,6 @@ input[type=checkbox]:checked + label:after {
 #imggame {
     margin-right: 100px;
     float: left;
-    margin-top: -60px;
 }
 
 #imggame:after {
@@ -895,11 +911,9 @@ input[type=checkbox]:checked + label:after {
 }
 
 .imggame{
-    vertical-align: middle;
-    border-style: none;
-    padding-top: 155px;
-    padding-right: 50px;
-    margin-top: -50px;
+    padding-top: 100px;
+    padding-right: 100px;
+    padding-bottom: 20px;
 }
 
 .imggame2{
@@ -912,7 +926,6 @@ input[type=checkbox]:checked + label:after {
 }
 
 .cont{
-    margin-bottom: 200px;
     margin-top: 150px;
 }
 
@@ -964,4 +977,8 @@ html{
 
 .listrow{
     display: inline-block; 
+}
+
+.imglist{
+    margin-bottom: -70px;
 }
