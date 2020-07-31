@@ -189,3 +189,36 @@ You can find the wireframe [here](https://1drv.ms/b/s!AqARRU4jO5elunG2T1AiA9FteW
 This document was created during the planning phase of this project. The final website has some slight differences from what was planned. 
 But I included this document in the project to provide insight into the original planning and direction of the site during the planning stages.  
 
+
+# Features
+ 
+## Existing Features
+
+### Elements on every page
+- Navbar
+    - The navigation bar features the AR Receuitment logo in the top left corner.
+
+    - For visitors to the site, list items links are available for them to use.
+        1. Home
+        2. About
+        3. Employers
+        4. Contact
+        5. User icon(this is a dropdown menu)
+            - Log in
+            - Sign up
+
+    - For users who are logged in, the list items are as follows: 
+        1. Home
+        2. About
+        3. Employers
+        4. Contact
+        5. User icon(this is a dropdown menu)
+            - Log out
+
+    - Python determines if the user is logged in or not by checking `if 'user' in session` and passes this data to Jinja to display the correct navbar for the user.
+
+    - The navbar is collapsed into a hamburger icon on mobile view.
+
+- Footer
+    - The footer features:
+        - Links to social media locations (which are facebook, twitter, linkedin and youtube ).
