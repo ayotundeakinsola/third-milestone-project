@@ -1,9 +1,14 @@
-<div align="center">
-    <img src="static/img/logo2.png" width="200" height="200">
+<div align ="center">
+    <img src="static/img/logo2.png" width="200" height="200" target="_blank" rel="noopener" alt="AR Agency Logo" aria-label="AR Agency Logo"/>
 </div>
 
 ## Introduction
-<br>
+
+<div align ="center">
+    <img src="static/img/tagline.png" target="_blank" rel="noopener" alt="AR Recruitment Agency" aria-label="AR Recruitment Agency"/>
+</div>
+
+<hr>
 
 [AR Agency](https://ar-recriutment-agency.herokuapp.com/) was created by both Ayo Akinsola and Ruth Dara-Akinsola to help organizations grow by finding the right talents. 
 Talents that really match the corporate culture. We believe that this is the basis for a long-term relationship. 
@@ -14,7 +19,7 @@ If talents believe in what you believe, it is possible to build a strong brand a
     - [Objectives](#objectives)
         - [Visitor Objectives](#visitor-objectives)
         - [Business Objectives](#business-objectives)
-        - [AR Agency Objectives](#AR-Agency-objectives)
+        - [AR Agency Objectives](#ar-agency-objectives)
     - [User Stories](#user-stories)
         - [Visitor Stories](#visitor-stories)
         - [Business Stories](#business-stories)
@@ -77,7 +82,7 @@ If talents believe in what you believe, it is possible to build a strong brand a
 The central target audience for AR Agency are:
 - Stdents looking for a student jobs.
 - Dutch/English speaking candidates.
-- High Skilled Migrants
+- High Skilled Migrants.
 - Graduates.
 
 User Objectives are:
@@ -90,28 +95,58 @@ User Objectives are:
 
 - Job seekers would be helped through the application process. 
 
-- Candidates can be sure they have access to more opportunities
+- Candidates can be sure they have access to more opportunities.
 
 - Users can have their data stored so they can be contacted for jobs at anytime. 
 
 AR Agency is a great way to meet user needs because:
 
-- AR recruitment agency has access to the best talent available
+- AR recruitment agency has access to the best talent available.
 
 - AR recruitment agency saves time because they take care of the initial steps in the hiring process. 
 
-- AR Recruitment agency conducts background checks on candidates, which is essential when considering potential employees
+- AR Recruitment agency conducts background checks on candidates, which is essential when considering potential employees.
 
 ### Business Objectives 
 
-- Searching for specialised & executive roles
+- Searching for specialised & executive roles.
 
-- Fulfil both short & long term needs
+- Fulfil both short & long term needs.
 
 - Provide a pipeline full of talent to make business decisions.
 
-- Recruiting agencies are partners, not foes
+- Recruiting agencies are partners, not foes.
 
+Business User objectives are:
+
+- A well thought-out, well designed, user-friendly platform that will benefit sell the core function of AR Agency.
+
+- A user interface that is user friendly manage data easily, efficiently & effectively.
+
+- Value creation. Having an online presence to market AR Agency properly.
+
+AR AGency is a great way to meet these user needs because:
+
+- The data management structure has been put in place to manage data and make sure what is provided fits the needs of the database structure.
+
+- The listing page can only be edited by logged in users who post a job. 
+
+- The listing page for the business user shows all their existing listings and gives them the option to view, edit or delete them from this location. 
+
+- THe site offers the business user links and buttons to make navigation easy. 
+
+### AR Agency Objectives
+
+- Provide access to key strategic skills
+
+- AR recruitment agency can speed up the time it takes to find a new employee
+
+- Offer specialist knowledge by telling you what the job market currently looks like and also also let you know how to best achieve your recruitment needs.
+
+
+## User Stories
+
+### Visitor Stories
 
 
  Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
