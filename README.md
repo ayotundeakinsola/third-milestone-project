@@ -4,7 +4,7 @@
 
 ## Introduction
 
-<div align ="center">
+<div>
     <img src="static/img/tagline.png" target="_blank" rel="noopener" alt="AR Recruitment Agency" aria-label="AR Recruitment Agency"/>
 </div>
 
@@ -23,9 +23,7 @@ If talents believe in what you believe, it is possible to build a strong brand a
     - [User Stories](#user-stories)
         - [Visitor Stories](#visitor-stories)
         - [Business Stories](#business-stories)
-    - [Design Choices](#design-choices)
     - [Wireframes](#wireframes)
-    - [Flowchart](#flowchart)
     - [PDF](#pdf)
 
 2. [Features](#features)
@@ -125,15 +123,6 @@ Business User objectives are:
 
 - Value creation. Having an online presence to market AR Agency properly.
 
-AR AGency is a great way to meet these user needs because:
-
-- The data management structure has been put in place to manage data and make sure what is provided fits the needs of the database structure.
-
-- The listing page can only be edited by logged in users who post a job. 
-
-- The listing page for the business user shows all their existing listings and gives them the option to view, edit or delete them from this location. 
-
-- THe site offers the business user links and buttons to make navigation easy. 
 
 ### AR Agency Objectives
 
@@ -143,10 +132,61 @@ AR AGency is a great way to meet these user needs because:
 
 - Offer specialist knowledge by telling you what the job market currently looks like and also also let you know how to best achieve your recruitment needs.
 
+- The data management structure has been put in place to manage data and make sure what is provided fits the needs of the database structure.
+
+- The listing page can only be edited by logged in users who post a job. 
+
+- The listing page for the business user shows all their existing listings and gives them the option to view, edit or delete them from this location. 
+
+- THe site offers the business user links and buttons to make navigation easy. 
+
+
 
 ## User Stories
 
 ### Visitor Stories
 
+As a visitor to AR Agency I expect/want/need:
 
- Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+1.  I would like the app to be easy to use.
+
+2.  I would like to easily find what I am looking for, I want the layout of the site to make sense so I am not confused or put off using it. 
+
+3.  Be able to register to have my own profile.
+
+4.  I would like to be able to delete my job posting and all content added by me at any point.
+
+5.  I would like to be able to edit my job posting and all content added by me at any point.
+
+6.  As a user of AR Agency, I expect to be able to easily get in contact via a contact form.
+
+7.  I would like to post the books that I own and want to buy on a online database
+
+8.  As a user accessing this site from a mobile phone or tablet, I want the site to have been designed responsively so that it is still easy to navigate and use on my smaller devices. 
+
+9.  As a user, I would like to view the books that I have added.
+
+10. Be able to browse and navigate information easily.
+
+### Business Stories
+
+1. To be able to log in to access my existing vacancies, and for my data to only be editable with my account.
+
+2. To create, edit and delete vacancies in my account.
+
+3. Forms for inputting my data to make the process easy, that there is no wasting my time or making the process difficult or slow. 
+
+
+## Wireframes
+
+The wireframe was created using [Figma](https://www.figma.com/) during the conceptul phase and project proposal to my mentor. 
+
+You can find the wireframe [here](static/doc/wireframe.pdf).
+.
+
+### PDF
+- [AR Agency Database Schema](static/doc/Database_Schema.docx)
+
+This document was created during the planning phase of this project. The final website has some slight differences from what was planned. 
+But I included this document in the project to provide insight into the original planning and direction of the site during the planning stages.  
+
