@@ -224,7 +224,7 @@ But I included this document in the project to provide insight into the original
 <img src="static/img/tagline.png" alt="AR Agency home page on all major screen sizes" >
 </div>
 
-- The AR Home page features a colorful image of myself. I had earlier chosen a different picture but my wife convinced me to go ahead with this.. 
+- The AR home page features a colorful image of myself. I had earlier chosen a different picture but my wife convinced me to go ahead with this.. 
 I chose this image because it is eye catching and striking, and it shows that AR Agency is ready for business.  
 This image was coded as a background-image in css and set to `background-size: cover;` so that it is responsive while never getting stretched or distorted. 
 
@@ -234,3 +234,64 @@ This image was coded as a background-image in css and set to `background-size: c
 <img src="static/img/aboutline.png" alt="AR Agency about page on all major screen sizes" >
 </div>
 
+- The AR about page features a colorful image. 
+This image was coded as a background-image in css and set to `background-size: cover;` so that it is responsive while never getting stretched or distorted. 
+Also, there are 8 companies which we currently have in our portfolio
+    - Wire
+    - Real Wave
+    - Inner 
+    - Gabo
+    - Crosswill
+    - Pitch
+    - Job line
+    - Loud Nick
+
+### Employers Page
+
+<div align="center">
+<img src="static/img/employerline.png" alt="AR Agency employers page on all major screen sizes" >
+</div>
+
+- The AR employers page features a colorful background image. 
+This image was coded as a background-image in css and set to `background-size: cover;` so that it is responsive while never getting stretched or distorted. 
+Also, there is a `post a job` button that links to a form for employers to post a vacancy. 
+Finally, there are 8 companies which we currently have in our portfolio
+    - Wire
+    - Real Wave
+    - Inner 
+    - Gabo
+    - Crosswill
+    - Pitch
+    - Job line
+    - Loud Nick
+
+Finally there are 6 reasons why you should work with AR Agency
+
+    - Fast Hiring Process
+    - Low Fees
+    - Large Talent Pool
+    - Local & Remote
+    - 20 years experience
+    - Custom Consulting
+
+### Contact Page
+
+<div align="center">
+<img src="static/img/contactline.png" alt="AR Agency contact page on all major screen sizes" >
+</div>
+
+- The AR contact page features a colorful background image. 
+This image was coded as a background-image in css and set to `background-size: cover;` so that it is responsive while never getting stretched or distorted. 
+Also, there is a `Email` button that scroll down to the contact form. 
+When the contact form is filled a message is flashed to show that form has been filled andthe details are saved in mongodb.
+
+### Login Page
+
+<div align="center">
+<img src="static/img/loginline.png" alt="AR Agency login page on all major screen sizes" >
+</div>
+
+- The AR login page features no background image.
+- The log in page also features a simple **form** where the user can enter their username and their password.
+When the contact form is filled a message is flashed to show that form has been filled and the details are saved in mongodb. Thereafter, the user is logged in. 
+While logged-in, the log-in button disappears and the only button that shows is the log-out  button.
