@@ -18,37 +18,38 @@ app.config['MONGODB_NAME'] = os.environ.get('MONGODB_NAME')
 
 mongo = PyMongo(app)
 
+# ---- Home Page ----- #
 @app.route('/')
 def index():
     return render_template("index.html", title='Home')
 
+# ---- About Page ----- #
 @app.route('/about')
 def about():
     return render_template("about.html", title='About')
 
-
-@app.route('/candidate')
-def candidate():
-    return render_template("candidate.html", title='Candidate')
-
+# ---- Employers Page ----- #
 @app.route('/employers')
 def employers():
     return render_template("employers.html", title='Employers')
 
+# ---- Contact Page ----- #
 @app.route('/contact')
 def contact():
     return render_template("contact.html", title='Contact')
 
-
+# ---- Vacancies Page ----- #
 @app.route('/vacancies')
 def vacancies():
     return render_template("vacancy.html", title='Vacancy', employ=mongo.db.employer.find())
 
+# ---- Listing Page ----- #
 @app.route('/listing/<employer_id>')
 def listing(employer_id):
     the_list =  mongo.db.employer.find_one({"_id": ObjectId(employer_id)})
     return render_template('listing.html', employer=the_list, title='Listing')
 
+# ---- Employer_form Page ----- #
 @app.route('/employer_form', methods=['GET', 'POST'])
 def employer_form():
     if request.method == 'POST':
@@ -58,11 +59,14 @@ def employer_form():
         return redirect(url_for("vacancies"))
     return render_template('employerform.html', title='Post A Job')
 
+# ---- Edit_job Page ----- #
 @app.route('/edit_job/<employer_id>')
 def edit_job(employer_id):
     the_job =  mongo.db.employer.find_one({"_id": ObjectId(employer_id)})
     return render_template('editemployerform.html', employer=the_job, title='Edit A Job')
 
+
+# ---- Update a Job----- #
 @app.route('/update_job/<employer_id>', methods=['POST'])
 def update_job(employer_id):
     employ = mongo.db.employer
@@ -82,11 +86,14 @@ def update_job(employer_id):
     })
     return redirect(url_for('vacancies'))
 
+# ---- Delete a Job ----- #
 @app.route('/delete_job/<employer_id>')
 def delete_job(employer_id):
     mongo.db.employer.remove({'_id': ObjectId(employer_id)})
+    flash("Your vacancy has been deleted!")
     return redirect(url_for('vacancies'))
 
+# ---- Candidate form Page ----- #
 @app.route('/candidate_form', methods=['GET', 'POST'])
 def candidate_form():
     if request.method == 'POST':
@@ -96,6 +103,7 @@ def candidate_form():
         return redirect(url_for("index"))
     return render_template('candidateform.html', title='Submit Your Vacancy', candidate=mongo.db.candidates.find())
 
+# ---- Contact Us Form ----- #
 @app.route('/contactus_form', methods=['GET', 'POST'])
 def contactus_form():
     if request.method == 'POST':
@@ -105,6 +113,7 @@ def contactus_form():
         return redirect(url_for("index"))
     return render_template('contact.html', title='Contact', contact=mongo.db.contacts.find())
 
+# ---- Sign up Page ----- #
 @app.route('/register', methods=['POST', 'GET'])
 def register():
     if request.method == "POST":
@@ -128,6 +137,7 @@ def register():
         return redirect(url_for("index"))
     return render_template('register.html', title='Register')
 
+# ---- Login Page ----- #
 @app.route('/login', methods = ['POST', 'GET'])
 def login():
     if request.method== 'POST':
@@ -153,7 +163,8 @@ def login():
                 return redirect(url_for("login"))
     
     return render_template("login.html", title='Login')
-    
+
+# ---- Logout Page ----- #    
 @app.route('/logout')
 def logout():
     # remove user from session cookies

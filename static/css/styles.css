@@ -7,7 +7,7 @@ body{
     padding: 0px;
     box-sizing: border-box;
 }
-
+/* navbar */
 .navbar-brand {
   margin: 0;
   padding-top: 0;
@@ -261,7 +261,7 @@ label.radio:after {
 input[type=radio]:checked + label:after {
       opacity: 1;
       }
-
+/* styling for button */
 .btnblock {
       margin-top: 10px;
       text-align: center;
@@ -384,6 +384,7 @@ a:focus, a:hover {
     background-color: white;
     }
 
+/* Styling for each html section */
 .sections {
     position: relative;
     background-color: #fff;
@@ -624,11 +625,6 @@ h1, h3, h4, h5, h6 {
     }
 }
 
-/*
-a:hover {
-  color: red;
-    } */
-
 @media (min-width: 981px) {.sections {
     padding: 4% 0;}
     }
@@ -757,6 +753,7 @@ select {
 
 .text-center {
     text-align: center!important;
+    overflow: hidden;
 }
 
 .mb-4{
